@@ -1,0 +1,31 @@
+<style>
+  .transparent-layer {
+    -webkit-app-region: drag;
+    position: fixed;
+    background-color: transparent;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+  }
+</style>
+
+<body>
+  <div class="transparent-layer"></div>
+  <canvas id="live2d" width="650" height="600" style="width: 325px;height: 300px;"></canvas>
+</body>
+<script src="./assets/js/live2d.js"></script>
+<script>
+  loadlive2d("live2d", "./assets/kesshouban_v2/model.json");
+
+  const transparentLayer = document.querySelector(".transparent-layer");
+  window.addEventListener("keydown", evt => {
+    if (evt.keyCode === 17) {
+      transparentLayer.style.display = "block";
+    }
+  });
+  window.addEventListener("keyup", evt => {
+    if (evt.keyCode === 17) {
+      transparentLayer.style.display = "none";
+    }
+  })
+</script>
