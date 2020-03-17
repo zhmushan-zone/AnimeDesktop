@@ -1,6 +1,7 @@
 # AnimeDesktop
 
 ### [下载链接](https://github.com/zhmushan/AnimeDesktop/releases)
+> `AnimeDesktop-win32-x64.zip` 是免安装版, `AnimeDesktop.appx` 是 `UWP` 版
 
 这是一个摆放在桌面上的玩具, `electron` 打包的 `UWP`, 抄自 https://github.com/amorist/platelet, 按住 `Ctrl` 可以到处拖动.
 
