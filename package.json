@@ -7,11 +7,12 @@
   "main": "dist/main.js",
   "scripts": {
     "start": "tsc && electron ./dist/main.js",
-    "pack": "tsc && electron-packager . AnimeDesktop --platform=win32 --arch=x64 --out=build --icon=favicon.ico --asar"
+    "pack": "rimraf dist uwp && tsc && electron-packager . AnimeDesktop --platform=win32 --arch=x64 --out=. --icon=favicon.ico --asar"
   },
   "devDependencies": {
     "electron": "^8.1.1",
     "electron-packager": "^14.2.1",
+    "rimraf": "^3.0.2",
     "typescript": "^3.8.3"
   }
 }

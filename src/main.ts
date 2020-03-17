@@ -11,10 +11,12 @@ function createWindow() {
     skipTaskbar: true,
     hasShadow: false,
     transparent: true,
-    resizable: app.isPackaged ? false : true,
+    resizable: false,
     frame: false,
     focusable: true,
-    alwaysOnTop: true
+    alwaysOnTop: true,
+    maximizable: false,
+    fullscreenable: false
   });
   mainWindow.loadFile(path.join(__dirname, "../index.html"));
 
